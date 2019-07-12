@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "mypass",
-    "database": "travelSecure_development",
+    "password": "sakog123",
+    "database": "Projectx2",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
