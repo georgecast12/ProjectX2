@@ -20,19 +20,20 @@ var qrProduct = function(result) {
       var prod = value.result;
       console.log(prod);
 
-      // exports.addProduct = function(req, res) {
-      //   db.Inven.create({
-      //     product: value.result,
-      //   })
-      //     .then(function() {
-      //       res.send({ redirect: "/" });
-      //     })
-      //     .catch(function(err) {
-      //       res.json(err);
-      //     });
-      // };
-
-      // console.log(value);
+      addProduct = function(req, res) {
+        db.Inven.create({
+          product: prod,
+          quantity: 1
+        });
+        // .then(function() {
+        //   res.send({ redirect: "/" });
+        // })
+        // .catch(function(err) {
+        //   res.json(err);
+        // });
+      };
+      addProduct();
+      console.log(value);
     };
 
     qr.decode(image.bitmap);
