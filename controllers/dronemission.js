@@ -1,25 +1,24 @@
-const { spawn } = require("child_process");
+// const { spawn } = require("child_process");
 const sdk = require("tellojs");
 
 exports.runMission = function() {
   console.log("running mission");
-  const bindVideo = async () => {
-    const h264encoder_spawn = {
-      command: "mplayer",
-      args: ["-gui", "-nolirc", "-fps", "35", "-really-quiet", "-"]
-    };
-    const h264encoder = spawn(
-      h264encoder_spawn.command,
-      h264encoder_spawn.args
-    );
-    const videoEmitter = await sdk.receiver.video.bind();
-    console.log(videoEmitter);
-    videoEmitter.on("message", msg => h264encoder.stdin.write(msg));
-  };
+  // const bindVideo = async () => {
+  //   const h264encoder_spawn = {
+  //     command: "mplayer",
+  //     args: ["-gui", "-nolirc", "-fps", "35", "-really-quiet", "-"]
+  //   };
+  //   const h264encoder = spawn(
+  //     h264encoder_spawn.command,
+  //     h264encoder_spawn.args
+  //   );
+  //   const videoEmitter = await sdk.receiver.video.bind();
+  //   console.log(videoEmitter);
+  //   videoEmitter.on("message", msg => h264encoder.stdin.write(msg));
+  // };
 
   sdk.control
     .connect()
-    .then(() => bindVideo())
     .then(() => sdk.control.takeOff())
     // .then(() => sdk.control.move.front(20))
     // .then(() => sdk.control.move.front(20))
