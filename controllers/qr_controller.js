@@ -3,7 +3,7 @@ var Jimp = require("jimp");
 var fs = require("fs");
 var path = require("path");
 var QrCode = require("qrcode-reader");
-var buffer = fs.readFileSync(path.join(__dirname, "../img/qrimg.jpg"));
+var buffer = fs.readFileSync(path.join(__dirname, "../img/qrimg.jpeg"));
 
 var qrProduct = function(result) {
   Jimp.read(buffer, function(err, image) {
@@ -17,13 +17,17 @@ var qrProduct = function(result) {
         console.error(err);
         // TODO handle error
       }
-      var prod = value.result;
-      console.log(prod);
+
+      var imgde = value.result;
+      var proInf = imgde.split(",");
+      console.log(proInf);
+      var prod = proInf[0];
+      var qunt = proInf[1];
 
       addProduct = function(req, res) {
         db.Inven.create({
           product: prod,
-          quantity: 1
+          quantity: qunt
         });
         // .then(function() {
         //   res.send({ redirect: "/" });
@@ -33,7 +37,7 @@ var qrProduct = function(result) {
         // });
       };
       addProduct();
-      console.log(value);
+      // console.log(value);
     };
 
     qr.decode(image.bitmap);
