@@ -1,24 +1,23 @@
 {
   "name": "ProjectX2",
-  "title": "",
   "version": "1.0.0",
-  "homepage": "",
-  "author": "",
-  "license": {
-    "type": "MIT",
-    "url": ""
-  },
+  "description": "",
+  "main": "routes.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/www"
   },
-  "devDependencies": {
-    "font-awesome": "^4.6.3"
-  },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/georgecast12/ProjectX2.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgecast12/ProjectX2/issues"
+  },
+  "homepage": "https://github.com/georgecast12/ProjectX2#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "express": "^4.17.1",
@@ -30,9 +29,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "qrcode-reader": "^1.0.4",
-    "sequelize": "^5.8.12"
-  },
-  "engines": {
-    "node": "7.8.0"
+    "sequelize": "^5.10.0",
+    "tellojs": "^0.1.32"
   }
 }
