@@ -4,14 +4,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1],
-      },
+        len: [1]
+      }
     },
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      len: [1],
-    },
+      allowNull: true,
+      len: [1]
+    }
   });
 
   // Inven.associate = function(models) {
