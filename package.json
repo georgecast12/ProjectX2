@@ -9,6 +9,7 @@
     "url": ""
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/www"
   },
   "devDependencies": {
@@ -29,8 +30,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "qrcode-reader": "^1.0.4",
-    "sequelize": "^5.8.12",
-    "tellojs": "^0.1.32"
+    "sequelize": "^5.8.12"
   },
   "engines": {
     "node": "7.8.0"
