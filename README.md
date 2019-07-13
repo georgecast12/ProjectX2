@@ -17,12 +17,13 @@
 - HTML/CSS
 - Bootstrap
 - Mysql
-- Tensor Flow (?)
 - QR reader, module
 - DJI Tello Drone
 - DJI SDK
 - Socket io
-- Node 
+- Node
+- Heroku
+
 
 
 
