@@ -29,7 +29,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "qrcode-reader": "^1.0.4",
-    "sequelize": "^5.10.0",
+    "sequelize": "^5.15.1",
     "tellojs": "^0.1.32"
   }
 }
