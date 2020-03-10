@@ -23,6 +23,8 @@
 - Socket io
 - Node
 - Heroku
+-Javascript
+-Java
 
 
 
